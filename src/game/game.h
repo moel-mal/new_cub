@@ -6,7 +6,7 @@
 /*   By: moel-mal <moel-mal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/22 18:02:25 by moel-mal          #+#    #+#             */
-/*   Updated: 2020/11/05 13:39:14 by moel-mal         ###   ########.fr       */
+/*   Updated: 2020/11/11 17:42:05 by moel-mal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ int		on_keyup(int key);
 int     ft_detect_wall_colision(int x, int y);
 
 //raycasting
-int ft_horizontale(double angle);
-int raycasting(double angle);
+float ft_horizontale(double angle);
+float raycasting(double angle);
 
 #endif

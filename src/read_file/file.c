@@ -6,7 +6,7 @@
 /*   By: moel-mal <moel-mal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/08 11:25:01 by moel-mal          #+#    #+#             */
-/*   Updated: 2020/10/20 17:26:35 by moel-mal         ###   ########.fr       */
+/*   Updated: 2020/11/07 03:37:32 by moel-mal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,6 +80,5 @@ char *ft_hexa(char *tab)
 	{
 		tab = ft_strdup("00");
 	}
-	printf("%s\n", tab);
     return (tab);
 }

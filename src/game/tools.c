@@ -6,7 +6,7 @@
 /*   By: moel-mal <moel-mal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/23 18:32:53 by moel-mal          #+#    #+#             */
-/*   Updated: 2020/11/05 17:26:18 by moel-mal         ###   ########.fr       */
+/*   Updated: 2020/11/11 17:23:58 by moel-mal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,6 @@ void    ft_draw_feld_view()
         j = ft_0_to_2pi(j);
         i++;
     }
-    printf("%d\n", i);
 }
 
 void    ft_select_player(int x, int y, int r)
@@ -61,6 +60,6 @@ void    ft_select_player(int x, int y, int r)
 void ft_put_player()
 {   
     ft_draw_cercle(g_cub.player.x, g_cub.player.y, (g_cub.map.tile_size / 8));
-    //ft_draw_feld_view();
-    ft_draw_ray(g_cub.player.x, g_cub.player.y,ft_horizontale(g_cub.player.angle), g_cub.player.angle);
+    ft_draw_feld_view();
+    ft_draw_ray(g_cub.player.x, g_cub.player.y,raycasting(g_cub.player.angle), g_cub.player.angle);
 }

@@ -6,7 +6,7 @@
 /*   By: moel-mal <moel-mal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/02 17:52:13 by moel-mal          #+#    #+#             */
-/*   Updated: 2020/11/03 17:18:15 by moel-mal         ###   ########.fr       */
+/*   Updated: 2020/11/11 17:38:23 by moel-mal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,10 +67,10 @@ int deal_key(int key, void *prm)
 void ft_move_player(void)
 {
     double p;
-    int x;
-    int y;
+    float x;
+    float y;
     
-    p = M_PI_4 / 4;
+   p = M_PI_4 / 4;
     if (g_cub.key.up){
         y = g_cub.player.y + (sin(g_cub.player.angle) * 10);
         x = g_cub.player.x + (cos(g_cub.player.angle) * 10);
