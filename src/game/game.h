@@ -6,7 +6,7 @@
 /*   By: moel-mal <moel-mal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/22 18:02:25 by moel-mal          #+#    #+#             */
-/*   Updated: 2020/11/11 17:42:05 by moel-mal         ###   ########.fr       */
+/*   Updated: 2020/11/20 09:53:15 by moel-mal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 struct          s_wall
 {
     int down;
-    int left;
+    int right;
     int x;
     int y;
 }               g_wall;

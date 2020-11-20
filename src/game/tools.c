@@ -6,7 +6,7 @@
 /*   By: moel-mal <moel-mal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/23 18:32:53 by moel-mal          #+#    #+#             */
-/*   Updated: 2020/11/11 17:23:58 by moel-mal         ###   ########.fr       */
+/*   Updated: 2020/11/20 13:14:56 by moel-mal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ static double ft_0_to_2pi(double angle)
 {
     if (angle < 0)
         angle = angle + (M_PI * 2);
-    else if (angle >  (M_PI * 2))
+    if (angle >  (M_PI * 2))
         angle = angle - (M_PI * 2);
     return (angle);
 }
@@ -61,5 +61,5 @@ void ft_put_player()
 {   
     ft_draw_cercle(g_cub.player.x, g_cub.player.y, (g_cub.map.tile_size / 8));
     ft_draw_feld_view();
-    ft_draw_ray(g_cub.player.x, g_cub.player.y,raycasting(g_cub.player.angle), g_cub.player.angle);
+    //ft_draw_ray(g_cub.player.x, g_cub.player.y,raycasting(g_cub.player.angle), g_cub.player.angle);
 }
