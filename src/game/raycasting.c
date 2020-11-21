@@ -6,7 +6,7 @@
 /*   By: moel-mal <moel-mal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/03 19:42:06 by moel-mal          #+#    #+#             */
-/*   Updated: 2020/11/20 13:32:08 by moel-mal         ###   ########.fr       */
+/*   Updated: 2020/11/21 10:22:28 by moel-mal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ void ft_ray_facing(double angle)
         g_wall.right = 1;
     else
         g_wall.right = 0;
+        printf("tan(alpha) = %f\n", tan(angle));
 }
 int ft_is_there_wall(float x, float y)
 {
@@ -32,6 +33,8 @@ int ft_is_there_wall(float x, float y)
 
     a = (int)floor(x) / g_cub.map.tile_size;
     b = (int)floor(y) / g_cub.map.tile_size;
+    if (a < 0 || b < 0 || a >= g_cub.map.width || b >= g_cub.map.height)
+        return (1);
     if (g_cub.map.tab[b][a] == '1')
         return (1);
     else 
@@ -91,7 +94,7 @@ float   ft_verticale(double angle)
     
     x_step = g_cub.map.tile_size;
     if (g_wall.right == 0)
-        x_step *= -1;
+        x_step *= -1; 
     y_step = g_cub.map.tile_size * tan(angle);
     if (g_wall.down == 0 && y_step > 0)
         y_step *= -1;
