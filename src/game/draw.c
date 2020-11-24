@@ -6,7 +6,7 @@
 /*   By: moel-mal <moel-mal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/28 14:52:49 by moel-mal          #+#    #+#             */
-/*   Updated: 2020/11/02 17:28:11 by moel-mal         ###   ########.fr       */
+/*   Updated: 2020/11/24 20:08:53 by moel-mal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,25 @@ void    ft_draw_cercle(int x, int y, int size)
     {
         ft_draw_ray(x,y,size, angle);
         angle = angle + c;
+    }
+}
+
+void    ft_draw_rect(int x, int y, int heigh, int width)
+{
+    int i;
+    int j;
+
+    i = 0;
+    j = 0;
+    while (j < heigh)
+    {
+        i = 0;
+        while (i < width)
+        {
+            mlx_pixel_put(g_cub.mlx, g_cub.win, x + i, y + j, 0xC0C0C0);
+            i++;
+        } 
+        j++;
     }
 }
 

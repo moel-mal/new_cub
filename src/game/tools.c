@@ -6,13 +6,13 @@
 /*   By: moel-mal <moel-mal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/23 18:32:53 by moel-mal          #+#    #+#             */
-/*   Updated: 2020/11/21 10:23:23 by moel-mal         ###   ########.fr       */
+/*   Updated: 2020/11/24 20:20:35 by moel-mal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "game.h"
 
-static double ft_0_to_2pi(double angle)
+double ft_0_to_2pi(double angle)
 {
     if (angle < 0)
         angle = angle + (M_PI * 2);

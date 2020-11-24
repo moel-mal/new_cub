@@ -6,7 +6,7 @@
 /*   By: moel-mal <moel-mal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/22 18:02:25 by moel-mal          #+#    #+#             */
-/*   Updated: 2020/11/20 09:53:15 by moel-mal         ###   ########.fr       */
+/*   Updated: 2020/11/24 20:21:15 by moel-mal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ int ft_game();
 void ft_put_player();
 void    ft_select_player(int x, int y, int r);
 void    ft_draw_feld_view(void);
+double ft_0_to_2pi(double angle);
 
 
 
@@ -37,6 +38,7 @@ void    ft_draw_feld_view(void);
 void    ft_draw_cub(int x, int y, int size);
 void    ft_draw_cercle(int x, int y, int size);
 void    ft_draw_ray(int x, int y, int size, double angle);
+void    ft_draw_rect(int x, int y, int heigh, int width);
 
 //map.c
 int     ft_put_map(void);
@@ -51,5 +53,9 @@ int     ft_detect_wall_colision(int x, int y);
 //raycasting
 float ft_horizontale(double angle);
 float raycasting(double angle);
+
+//draw_walls
+void game_3D(void);
+
 
 #endif

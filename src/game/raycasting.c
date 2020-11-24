@@ -6,7 +6,7 @@
 /*   By: moel-mal <moel-mal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/03 19:42:06 by moel-mal          #+#    #+#             */
-/*   Updated: 2020/11/21 10:22:28 by moel-mal         ###   ########.fr       */
+/*   Updated: 2020/11/21 11:07:22 by moel-mal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,8 @@ void ft_ray_facing(double angle)
         g_wall.right = 1;
     else
         g_wall.right = 0;
-        printf("tan(alpha) = %f\n", tan(angle));
 }
+
 int ft_is_there_wall(float x, float y)
 {
     int a;
