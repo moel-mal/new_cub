@@ -6,7 +6,7 @@
 /*   By: moel-mal <moel-mal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/13 11:13:48 by moel-mal          #+#    #+#             */
-/*   Updated: 2020/11/03 16:35:03 by moel-mal         ###   ########.fr       */
+/*   Updated: 2021/01/28 07:44:32 by moel-mal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ int		ft_get_struct1(char *line)
 		i = ft_get_color(info);
 	else
 		i = -1;
-	free_2d(info);
+	//free_2d(info);
 	return (i);
 }
 

@@ -3,9 +3,9 @@
 
 typedef struct  s_resulotion
 {
-	int x;
-	int y;
-	int check;
+	int 	x;
+	int 	y;
+	int 	check;
 }               t_resolution;
 
 typedef struct  s_texture
@@ -20,36 +20,45 @@ typedef struct  s_texture
 
 typedef	struct	s_map
 {
-	int		check;
-	char	**tab;
-	int		height;
-	int		width;
-	int		tile_size;
+	int			check;
+	char		**tab;
+	int			height;
+	int			width;
+	int			tile_size;
 }				t_map;
 
 typedef	struct s_player
 {
-	int 	o;
-	float 	x;
-	float	y;
-	double	angle;
+	int 		o;
+	float 		x;
+	float		y;
+	double		angle;
 }				t_player;
 
 typedef struct s_key
 {
-	int up;
-	int down;
-	int left;
-	int right;
-	int esc;
+	int 		up;
+	int 		down;
+	int 		left;
+	int 		right;
+	int 		esc;
 }				t_key;
 
+typedef	struct s_img
+{
+	void		*img;
+	int			*data;
+	int			bits_per_pixel;
+	int			line_length;
+	int			endian;
+}				t_img;
 
 struct  		s_cub
 {
 	t_resolution	resolution;
 	t_texture		texture;
 	t_player		player;
+	t_img			img;
 	void 			*mlx;
 	void			*win;
 	int				floor;
@@ -58,6 +67,6 @@ struct  		s_cub
 	int				player_check;
 	t_map			map;
 	t_key			key;
-}               g_cub;
+}               	g_cub;
 
 #endif

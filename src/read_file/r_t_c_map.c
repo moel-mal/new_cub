@@ -6,7 +6,7 @@
 /*   By: moel-mal <moel-mal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/13 11:38:33 by moel-mal          #+#    #+#             */
-/*   Updated: 2020/11/03 12:53:49 by moel-mal         ###   ########.fr       */
+/*   Updated: 2020/12/07 18:07:44 by moel-mal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ int	ft_get_color(char **info)
 	tab = ft_split(info[1], ',');
 	if (ft_calcule_2d_tab(tab) != 3)
 	{
-		free_2d(tab);
+		// free_2d(tab);
 		return(-1);
 	}
 	r = ft_atoi(tab[0]);
@@ -45,14 +45,14 @@ int	ft_get_color(char **info)
 	b = ft_atoi(tab[2]);
 	if (r < 0 || r > 255 || g < 0 || g > 255 || b > 255 || b < 0)
 	{
-		free_2d(tab);
+		// free_2d(tab);
 		return (-1);
 	}
 	if (ft_strncmp(info[0], "F", 3) == 0)
 		g_cub.floor = r * pow(256, 2) + g * 256 + b;
 	else if (ft_strncmp(info[0], "C", 3) == 0)
 		g_cub.ceiling = r * pow(256, 2) + g * 256 + b;
-	free_2d(tab);
+	// free_2d(tab);
 	return (0);
 }
 

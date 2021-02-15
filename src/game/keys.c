@@ -6,7 +6,7 @@
 /*   By: moel-mal <moel-mal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/02 17:52:13 by moel-mal          #+#    #+#             */
-/*   Updated: 2020/11/24 20:23:03 by moel-mal         ###   ########.fr       */
+/*   Updated: 2020/12/24 17:30:19 by moel-mal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,10 +57,15 @@ int		on_keyup(int key)
 
 int deal_key(int key, void *prm)
 {
+    mlx_destroy_image ( g_cub.mlx, g_cub.img.img);
+     g_cub.img.img = mlx_new_image(g_cub.mlx, g_cub.resolution.x, g_cub.resolution.y);
     ft_move_player();
-    mlx_clear_window( g_cub.mlx, g_cub.win);
-    game_2D();
+    
+   
+  //game_2D();
     game_3D();
+   mlx_put_image_to_window(g_cub.mlx, g_cub.win, g_cub.img.img, 0, 0);
+   
     return(0);
 }
 
@@ -69,11 +74,11 @@ void ft_move_player(void)
     double p;
     float x;
     float y;
-    
-   p = M_PI_4 / 4;
+
+    p = M_PI_4 / 8;
     if (g_cub.key.up){
-        y = g_cub.player.y + (sin(g_cub.player.angle) * 10);
-        x = g_cub.player.x + (cos(g_cub.player.angle) * 10);
+        y = g_cub.player.y + (sin(g_cub.player.angle) * 2);
+        x = g_cub.player.x + (cos(g_cub.player.angle) * 2);
         if (ft_detect_wall_colision(x, y))
         {
             g_cub.player.y = y;
@@ -82,8 +87,8 @@ void ft_move_player(void)
     }
     if (g_cub.key.down)
     {
-        y = g_cub.player.y - sin(g_cub.player.angle) * 10;
-        x = g_cub.player.x - cos(g_cub.player.angle) * 10;
+        y = g_cub.player.y - sin(g_cub.player.angle) * 2;
+        x = g_cub.player.x - cos(g_cub.player.angle) * 2;
         if (ft_detect_wall_colision(x, y))
         {
             g_cub.player.y = y;
@@ -97,9 +102,9 @@ void ft_move_player(void)
             g_cub.player.angle -= (2 * M_PI);
     }
      if (g_cub.key.left)
-     {
+    {
         g_cub.player.angle -= p;
         if (g_cub.player.angle < 0)
             g_cub.player.angle += (2 * M_PI);
-     }
+    }
 }
