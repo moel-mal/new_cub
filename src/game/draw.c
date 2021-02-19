@@ -6,7 +6,7 @@
 /*   By: moel-mal <moel-mal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/28 14:52:49 by moel-mal          #+#    #+#             */
-/*   Updated: 2021/01/04 19:23:38 by moel-mal         ###   ########.fr       */
+/*   Updated: 2021/02/19 18:06:58 by moel-mal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,7 @@ void    ft_draw_rect(int x, int y, int heigh, int width)
         i = 0;
         while (i < width)
         {
-            pixput(x + i, y + j, ft_get_texture(x + i, y + j));
+            pixput(x + i, y + j, ft_get_texture_1(x + i, y + j));
             //mlx_pixel_put(g_cub.mlx, g_cub.win, x + i, y + j, 0xC0C0C0);
             i++;
         }

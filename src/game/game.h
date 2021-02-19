@@ -6,7 +6,7 @@
 /*   By: moel-mal <moel-mal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/22 18:02:25 by moel-mal          #+#    #+#             */
-/*   Updated: 2021/01/09 15:43:45 by moel-mal         ###   ########.fr       */
+/*   Updated: 2021/02/19 19:07:29 by moel-mal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,7 @@ struct          s_wall
 {
     int down;
     int right;
-    int x;
-    int y;
+    int v;
 }               g_wall;
 
 void game_2D(void);
@@ -56,11 +55,10 @@ float ft_horizontale(double angle);
 float raycasting(double angle);
 
 //draw_walls
-void brikol(void);
 void game_3D(void);
 
 //texture
-int ft_get_texture(int x, int y);
+int ft_get_texture_1(int x, int y);
 
 
 #endif

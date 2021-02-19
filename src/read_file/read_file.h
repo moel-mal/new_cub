@@ -10,9 +10,10 @@ int	ft_get_texture(char **info);
 int	ft_get_resolution(char **info);
 
 //read_from_file
+int		ft_read_file(char *av);
 int		ft_get_struct1(char *line);
 int		ft_get_struct(char *line, char **tmp);
-int		ft_read_file(char *av);
+int	ft_get_texture(char **info);
 
 //file
 char *ft_hexa(char *tab);

@@ -6,7 +6,7 @@
 /*   By: moel-mal <moel-mal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/03 19:42:06 by moel-mal          #+#    #+#             */
-/*   Updated: 2021/01/09 15:44:56 by moel-mal         ###   ########.fr       */
+/*   Updated: 2021/02/19 19:09:11 by moel-mal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -121,7 +121,13 @@ float raycasting(double angle)
     a = ft_horizontale(angle);
     b = ft_verticale(angle);
     if (a < b)
+    {
+        g_wall.v = 0;
         return (a);
-    else 
-       return (b);
+    }
+    else
+    { 
+        g_wall.v = 1;
+        return (b);
+    }
 }

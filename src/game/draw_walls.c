@@ -6,14 +6,14 @@
 /*   By: moel-mal <moel-mal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/24 19:43:27 by moel-mal          #+#    #+#             */
-/*   Updated: 2021/01/04 16:20:06 by moel-mal         ###   ########.fr       */
+/*   Updated: 2021/02/19 16:10:47 by moel-mal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
 #include "game.h"
 
-void brikol(void)
+static void player_position(void)
 {
     int i;
     int j;
@@ -54,10 +54,10 @@ void game_3D(void)
     int n_ray;
     double angle;
     double j;
-    
+
     j = 0;
     i = 0;
-    brikol();
+    player_position();
     n_ray = g_cub.resolution.x / (M_PI / 3);
     angle = (M_PI / 3) / n_ray;
     j = g_cub.player.angle - (M_PI / 6);
