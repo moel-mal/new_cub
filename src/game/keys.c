@@ -6,7 +6,7 @@
 /*   By: moel-mal <moel-mal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/02 17:52:13 by moel-mal          #+#    #+#             */
-/*   Updated: 2021/02/19 19:04:21 by moel-mal         ###   ########.fr       */
+/*   Updated: 2021/02/20 11:43:31 by moel-mal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,11 +61,9 @@ int deal_key(int key, void *prm)
      g_cub.img.img = mlx_new_image(g_cub.mlx, g_cub.resolution.x, g_cub.resolution.y);
     ft_move_player();
     
-   
-//game_2D();
+    //game_2D();
     game_3D();
     mlx_put_image_to_window(g_cub.mlx, g_cub.win, g_cub.img.img, 0, 0);
-   
     return(0);
 }
 
